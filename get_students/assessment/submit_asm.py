@@ -6,8 +6,8 @@ url = "" # url target
 with requests.session() as session:
 
     data = {
-            'idno' : "",
-            'idpass' : "",
+            'idno' : "6412732113",
+            'idpass' : "1348600003933",
             'page': 1,
             'Submit' : '++%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A++'
         }
@@ -21,7 +21,7 @@ with requests.session() as session:
 
     if response:
 
-        url2 = ""
+        url2 = "http://reg.sskru.ac.th/student/accsskru/assessment_t.php?term=2/2565&subjcode=Z2dmZWdnbF"
 
         data2 = {
             'ACQ1' : '5',
@@ -46,13 +46,13 @@ with requests.session() as session:
             'ACQ21' : '5',
             'ACQ22' : '5',
             'ACMT2': '',
-            'idno' : "",
+            'idno' : "6412732113",
             'term' : '2%2F2565',
             'subjcode' : '1521102',
             'msubmit' : '%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5'
         }
 
-        asm = session.post(url2,data=data2)
+        asm = session.post(url2,headers=headers,data=data2)
 
         with open('index.html','w') as f:
 

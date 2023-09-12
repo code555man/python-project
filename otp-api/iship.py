@@ -1,0 +1,24 @@
+import requests, json
+#  https://app.iship.cloud/register
+url ="https://app.iship.cloud/api/ant/request-otp/06000000"
+
+headers = {
+    'Method':'GET',
+    'Path':'/api/ant/request-otp/060000000',
+    'Scheme':'https',
+    'Accept':'*/*',
+    'Accept-Encoding':'gzip, deflate, br',
+    'Accept-Language':'th-TH,th;q=0.9',
+    'Content-Type':'application/json',
+    'Referer':'https://app.iship.cloud/register?_gl=1*1wz2veh*_gcl_aw*R0NMLjE2OTAwOTUwMTMuQ2owS0NRandfTzJsQmhDRkFSSXNBQjBFOEI4cTd4VDA0MzBqS0h5LTI2aVg3Tk5vTUpqV3JZVy16VTlJSGtlbmdEd1NtMWJ6bUFuTXZJRWFBc3RwRUFMd193Y0I.*_gcl_au*MTYwNDY3NDAwMy4xNjkwMDk1MDEz',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+}
+
+data = {"username":"06000000","optType":0,"recaptchaToken":"-4CbzNoSy03AAYGu2Q5xVZccmTVG8_ghHHxhm1m44fxzAxW5lUEA7ktbzuAp1msJfUcAUw9hmmaqUv2ZJFCCbPOl03VtB0h0cNhs2NYbddMJcu55LckjZETPhOKT4qHQzCcKitzPzh36H1hhu9N5yYnmZOC6BwhG7pK_gik7PE7CrSmmXJqnrSL-JY08DVpmfWclnZMH1djwSUMQv2WXPDd_rkl3dineZOW1qS0L1iTybYN871Va3M4GhRoXT2VX9o2v7fn052-5O3oWyBZ3NbQndJRxwI4sJgEuEh9iIgX0Rs7air5iJnVi2ABVA0jzGfaSsVwGfFyuMQT6U1UCdY5cHJkj_Nc5KH_8DPFVJrZcCjREA9RtnEcAg0rLt_K4uJQas6zCBiSbeb9MbKl_jxU-W43rU2U0afbUNWurfdRX7YMWywVIPmuLpnbMU7kOz16F8up-rqiJnFYE1kIWQiSIoyCjuD96nQcvoToeEodJmLzDp3-54QeKd4V-yFC7ZPZHcOSGoNuDzJu4IXPMDr8nCo5XqW2A9xngQEerZsTnwq8iFsafs-ciGbt332rvFJWWa26IWZR8uQrBqFqY7eEBG1XVmXu7YDuGkv0-V9E0YnW5BWpDrdQ0JNPAcJzyHxoweXxsgL3Q3-UiilDnELAi-T36n4NCcxR8zpiPQKipKfvwHwtlurx6oh3WKRV72yrsnoxc6dXvphJk70ZbzBtpTpFJYPdERBoLAisIRE3PRfr3Du_OF4yt2R6SYi7OUR2elUDR-Rp53BI2wbdjOzm9CoNktVb-Zp_sjs7G6vMf09kRUVTUj8Z0JEPJhgO79YU1Xdan6TJ58c2Bsp9JnopJRAIH5NmzXsJlP3eiqGpZTihMcEP7bIbrxQzo8qwdHjcDd2fK4EcPORXgng23trtGKXvRKRyvafZ9JgFo6_PpC6drwRYlXwVE_c4Eg7Q8O1JhVVgGh1gWn0lIfy_si66o_jOQQg0QDevmrnpn7ihLKSc9fTPy5MhzeJmseeFVlytaCofWICQG-NlIc3CIlp40YRBD_bIcAgrxSn8_-b3xcDTzAA3qXQJDVzzl9ArdOjLJ7ftslDpgOMgXZLHP9IoWKRHKO0FHGFmpZZf2LP_hOzjdOtnXhh58J9SkzSi7DMFf2uqwK4eHqy45APe8xu-MXWHgvdUTSq-2t_yG020_8gMPUHkLXYfWBwWcTZLHFEff1vLtDVVagAKcF7X1dmmMWDnioJMxdDtu-GTajVveloigG5wY_Jq2QCOB1McbFS2p4mCAWrLRoECxLByfAFo0IXTNyVRtsEdDc9AXdfGFLIq89TlGIhj5UN_g-Lwl8WbxUbBTTwFlnt8RxrnOzCt8LoE_WVPkHhoXhJJuh6dPBOkSJBCX22u2g-3loTgnUSHE05PtUAO0_ZqdsaMG3o4JLKlyY1oCgPYaNkoOi1SFR3wJtMZdUPmHQRvd-a8XUaSW87dfv6rQzO","recaptchaSiteKey":"6LejduQhAAAAAJplB52IumC2_E5xKqqR2hZmeZPY","recaptchaExpectedAction":"Login"}
+
+
+# d = json.dump(data)
+
+r = requests.get(url,headers=headers,cookies={"Cookie":"_gcl_aw=GCL.1690095013.Cj0KCQjw_O2lBhCFARIsAB0E8B8q7xT0430jKHy-26iX7NNoMJjWrYW-zU9IHkengDwSm1bzmAnMvIEaAstpEALw_wcB; _gcl_au=1.1.1604674003.1690095013; __lt__cid=25826e45-07cb-4a55-bfd6-a682f38cc27e; _gid=GA1.2.1799528040.1690095016; _fbp=fb.1.1690095016003.1648597109; _tt_enable_cookie=1; _ttp=9E-gqciSlpbkmBSxhDjhUvlQCAw; XSRF-TOKEN=eyJpdiI6IjhhRDFOeW1WY0Mydk53NWUwWURaN2c9PSIsInZhbHVlIjoid0RkMjRJSGx3VDRmTUlUWnRmNCt5a0pDSzd1SDVDb1Y3bXRZUTlnSS9sVlQxY2dpZFRXNWlmQkErajkwdkJUWGdzQy9rRzRnc0RMTVRqNENaV2cvaDRTOTlUOXIrY1EzdVNqVGZBbzJhM1pyZzJQZHhqNHdRVm9DUGdYQjJSMWYiLCJtYWMiOiJjMjE3OWQyYTU1ODAwMDdiMmExOTU1MmViZWI4ZTc0NTM5MjRjYjU5NWFkNmMwODRmZWRlYjgxYjA0ZTIwYzRkIiwidGFnIjoiIn0%3D; iship_session=eyJpdiI6ImFTYnBJUWQxTG9ub1hGc1JJRStvRmc9PSIsInZhbHVlIjoiM1FHVU5OZ0Q3SEJCZmk4bitxQXFkOW92ZG1STzhHMFpPN2ptVE11MXdScnhDT2NlMW1xL2luRHZTdzBhUnRmM1crR0pZb2VvZHdEM1d5RGIzRmQwMmpyZUFrWlBPbGVjZzc4b0VnQVBBcDNja2hkY2poWkl0YWErMmFyZitKU20iLCJtYWMiOiI3Y2JjNzY4NTFhYmNhZDllNzU1MzY3NTYyZGFkNDIzMzgwNjM0MzFlODljZWU3ZDU5NDliYjRjOTBkMTQxNmFmIiwidGFnIjoiIn0%3D; __lt__sid=0edc138d-a9ac0097; _ga=GA1.2.1632135001.1690095016; _gat_UA-208577766-1=1; _ga_ZP0SLY3YMR=GS1.2.1690109769.2.0.1690109769.0.0.0; _ga_9QF6J7SNMX=GS1.1.1690109768.2.1.16"})
+
+print(r.text)

@@ -1,3 +1,0 @@
-selenium==4.22.0
-yt-dlp==2024.7.2
-webdriver-manager==4.0.1
